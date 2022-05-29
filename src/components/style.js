@@ -47,7 +47,7 @@ border-radius: 7%;
     font-size:3.5vw;  
     position:absolute;
     top:16%;
-    left:33%;
+    left:28%;
     width:43vw;
     height:19vh; 
     box-shadow: 8px 9px 5px black;
