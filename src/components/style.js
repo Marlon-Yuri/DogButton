@@ -63,7 +63,7 @@ width:47vw;
 @media(max-width:760px){
     position:absolute;
     top:50%;
-    left:28%;
-    width:52vw;
+    left:21%;
+    width:57vw;
 }
 `
