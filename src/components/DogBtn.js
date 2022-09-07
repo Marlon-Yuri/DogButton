@@ -15,14 +15,17 @@ const GlobalStyle = createGlobalStyle`
 export default function Dog() {
 
 const [dog, setDog] = useState([])
-const [err, setErr] = useState(false)
+const [erromsg, setErroMsg] = useState('')
+const [showDog, setShowdog] = useState(false)
 
 function BtnDog (){
     axios.get(`https://dog.ceo/api/breeds/image/random`).then(response => {
         setDog(response.data.message)
         console.log(response.data)
+        setShowdog(true)
     }).catch(err =>{
-        setErr(true)
+       console.log("Rolou erro aí :" + err)
+        setErroMsg('Aconteceu alguma coisa errada nos bastidores')
     })
 }
     return (
@@ -33,8 +36,8 @@ function BtnDog (){
                   <S.Button onClick={() =>{BtnDog()}}><b>Having a bad day? Click here</b></S.Button>
                 </S.BoxBtn>
                 <S.BoxDog>
-                    {/* TENHO QUE RESOLVER A MERDA DESSE BUG, NÃO RENDERIZAR NADA NA MONTAGEM */}
-                 {err  ? 'Procure o doguinho' :( <S.Image src={dog}/>)}  
+                   {showDog && <S.Image src={dog}/> }
+                 {erromsg}  
                 </S.BoxDog>
 
             </S.Container>

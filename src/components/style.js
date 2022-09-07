@@ -59,6 +59,7 @@ border-radius: 7%;
 `
 export const Image = styled.img`
 width:47vw;
+height: 90vh;
 
 @media(max-width:760px){
     position:absolute;
