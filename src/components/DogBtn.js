@@ -36,7 +36,7 @@ function BtnDog (){
                   <S.Button onClick={() =>{BtnDog()}}><b>Having a bad day? Click here</b></S.Button>
                 </S.BoxBtn>
                 <S.BoxDog>
-                   {showDog && <S.Image src={dog}/> }
+                   {showDog && <S.Image src={dog} alt='Doguinho'/> }
                  {erromsg}  
                 </S.BoxDog>
 
